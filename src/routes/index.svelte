@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Circle from '$lib/Circle.svelte';
+	import { Circle } from '$lib/index';
 
 	let width = 200;
 	let lineWidth = 30;

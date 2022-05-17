@@ -17,6 +17,14 @@ const config = {
 		vite: {
 			server: {
 				port: 4000
+			},
+			resolve: {
+				alias: [
+					{
+						find: '$component',
+						replacement: '/src/component'
+					}
+				]
 			}
 		}
 	}
