@@ -7,7 +7,7 @@
 <header class="header {pathname !== '/' ? 'border-b' : ''}">
 	<nav class="nav">
 		<a href="/">Example</a>
-		<a href="/doc">Documenttation</a>
+		<a href="/doc">Docs</a>
 		<a class="github" href="https://github.com/9t5c/svelte-circle" target="_blank">
 			<img class="icon icon-normal" src="/github.svg" alt="GitHub" />
 			<img class="icon icon-original" src="/github-original.svg" alt="GitHub" />

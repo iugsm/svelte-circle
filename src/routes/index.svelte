@@ -9,6 +9,7 @@
 	let percent = 10;
 	let rounded = true;
 	let responsive = true;
+	let animation = true;
 </script>
 
 <main class="main">
@@ -53,17 +54,31 @@
 					<input type="checkbox" bind:checked={responsive} />
 					Responsive
 				</label>
+				<label>
+					<input type="checkbox" bind:checked={animation} />
+					Animation
+				</label>
 			</li>
 		</ul>
 		<div class="stage">
-			<Circle {rounded} {width} {lineWidth} {bgColor} {color} {textColor} {percent} {responsive} />
+			<Circle
+				{rounded}
+				{width}
+				{lineWidth}
+				{bgColor}
+				{color}
+				{textColor}
+				{percent}
+				{responsive}
+				{animation}
+			/>
 		</div>
 	</section>
 </main>
 
 <style>
 	.main {
-		min-height: 100vh;
+		min-height: calc(100vh - 80px);
 		display: grid;
 		place-items: center;
 

@@ -7,6 +7,7 @@
 	export let responsive = false;
 	export let percent = 10;
 	export let rounded = false;
+	export let animation = true;
 
 	let svgWidth: number | string = '';
 
@@ -27,7 +28,6 @@
 >
 	<circle stroke={bgColor} cx="175" cy="175" r="175" stroke-width={lineWidth} fill="none" />
 	<circle
-		class="progress"
 		stroke={color}
 		transform="rotate(-90 175 175)"
 		cx="175"
@@ -38,6 +38,7 @@
 		stroke-dashoffset={offset}
 		stroke-linecap={rounded ? 'round' : 'butt'}
 		fill="none"
+		style="transition: {animation ? 'stroke-dashoffset 0.5s ease-out' : 'none'}"
 	/>
 	<text
 		style="font: bold 5rem Helvetica, Arial, sans-serif;"
@@ -51,9 +52,3 @@
 		<tspan dx="10">%</tspan>
 	</text>
 </svg>
-
-<style>
-	.progress {
-		transition: stroke-dashoffset 0.5s ease-out;
-	}
-</style>
