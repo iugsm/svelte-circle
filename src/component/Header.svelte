@@ -6,8 +6,8 @@
 
 <header class="header {pathname !== '/' ? 'border-b' : ''}">
 	<nav class="nav">
-		<a href="/">Example</a>
-		<a href="/doc">Docs</a>
+		<a href="/" class={pathname === '/' ? 'active' : ''}>Example</a>
+		<a href="/doc" class={pathname === '/doc' ? 'active' : ''}>Docs</a>
 		<a class="github" href="https://github.com/9t5c/svelte-circle" target="_blank">
 			<img class="icon icon-normal" src="/github.svg" alt="GitHub" />
 			<img class="icon icon-original" src="/github-original.svg" alt="GitHub" />
@@ -42,6 +42,10 @@
 		color: black;
 		font-size: 16px;
 		font-weight: 500;
+	}
+
+	.active {
+		text-decoration: underline;
 	}
 
 	.github .icon-original {

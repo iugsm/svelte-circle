@@ -12,7 +12,7 @@
 	let animation = true;
 </script>
 
-<main class="main">
+<div class="main">
 	<section class="container">
 		<ul class="create">
 			<li>
@@ -74,14 +74,14 @@
 			/>
 		</div>
 	</section>
-</main>
+</div>
 
 <style>
 	.main {
-		min-height: calc(100vh - 80px);
+		min-height: 100vh;
 		display: grid;
 		place-items: center;
-
+		background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 		accent-color: hsla(257, 10%, 27%, 1);
 	}
 
