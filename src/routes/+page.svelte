@@ -92,23 +92,28 @@
 		height: 100%;
 		background: hsla(17, 78%, 98%, 1);
 		border-radius: 12px;
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
+		display: flex;
+		align-items: center;
 	}
 
 	.create {
 		border-right: 1px solid rgba(0, 0, 0, 0.1);
-		grid-column: 1 / 4;
 		padding: 48px;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
+		overflow-y: scroll;
+		width: 40%;
+		max-width: 400px;
+		height: 100%;
 	}
 
 	.stage {
-		grid-column: 4 / -1;
-		display: grid;
-		place-items: center;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		overflow: hidden;
+		height: 100%;
 		padding: 60px;
 	}
 
