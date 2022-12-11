@@ -1,6 +1,6 @@
 {
   "name": "svelte-circle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://svelte-circle.vercel.app",
   "author": {
     "name": "9t5c"
@@ -14,26 +14,20 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
-		"build": "vite build",
-		"package": "svelte-kit package",
-		"preview": "vite preview",
-		"check": "svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check --plugin-search-dir=. .",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"build": "svelte-kit sync && svelte-package",
+		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
-		"@types/cookie": "^0.5.1",
-		"prettier": "^2.7.1",
-		"prettier-plugin-svelte": "^2.7.0",
-		"svelte": "^3.49.0",
-		"svelte-check": "^2.8.1",
-		"svelte-preprocess": "^4.10.7",
-		"tslib": "^2.4.0",
-		"typescript": "^4.7.4",
-		"vite": "^3.0.8"
+		"@sveltejs/package": "next",
+		"svelte": "^3.54.0",
+		"svelte-check": "^2.10.2",
+		"tslib": "^2.4.1",
+		"typescript": "^4.9.4",
+		"vite": "^4.0.0"
   },
   "type": "module"
 }

@@ -1,6 +1,5 @@
 <script lang="ts">
 	let str = `
-
     import Circle from 'svelte-circle'
   `;
 </script>
@@ -44,8 +43,9 @@
 <style>
 	.container {
 		padding-top: 80px;
-		max-width: 1536px;
+		max-width: 65ch;
 		margin: 0 auto;
+		padding-inline: 20px;
 	}
 
 	h2 {

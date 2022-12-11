@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '$component/Header.svelte';
+	import Header from './Header.svelte';
 	import '../app.css';
 </script>
 
