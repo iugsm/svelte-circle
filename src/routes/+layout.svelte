@@ -3,6 +3,10 @@
 	import '../app.css';
 </script>
 
+<svelte:head>
+	<title>svelte-circle</title>
+</svelte:head>
+
 <Header />
 <main>
 	<slot />

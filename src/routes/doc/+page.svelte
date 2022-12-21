@@ -1,7 +1,4 @@
 <script lang="ts">
-	let str = `
-    import Circle from 'svelte-circle'
-  `;
 </script>
 
 <section class="container">
@@ -13,7 +10,7 @@
 	<br />
 	<h2>Useage</h2>
 	<pre class="code"><span>{'<'}</span><span>script</span><span>{'>'}</span>
-  import {'{ '}Circle {' }'} from 'svelte-circle'
+  import {'{ '}Circle{' }'} from 'svelte-circle'
 <span>{'</'}</span><span>script</span><span>{'>'}</span>
 
 <span>{'<Circle />'}</span></pre>
