@@ -14,8 +14,8 @@
 
 <div class="main">
 	<section class="container">
-		<ul class="create">
-			<li>
+		<ul class="form">
+			<li class="range">
 				<p>Percentage</p>
 				<input type="range" bind:value={percent} />
 			</li>
@@ -78,43 +78,68 @@
 
 <style>
 	.main {
-		min-height: 100vh;
+		--color-accent: hsla(257, 10%, 27%, 1);
+		--color-container-bg: hsla(17, 78%, 98%, 1);
+		--padding: 20px;
+
+		min-height: calc(100vh - 64px);
+		padding: var(--padding);
+		accent-color: var(--color-accent);
+
 		display: grid;
 		place-items: center;
-		background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-		accent-color: hsla(257, 10%, 27%, 1);
 	}
 
 	.container {
-		max-width: 90vw;
-		max-height: 80vh;
+		background: var(--color-container-bg);
 		width: 100%;
-		height: 100%;
-		background: hsla(17, 78%, 98%, 1);
+		padding: var(--padding);
 		border-radius: 12px;
-		display: flex;
-		align-items: center;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
 	}
 
-	.create {
-		border-right: 1px solid rgba(0, 0, 0, 0.1);
-		padding: 48px;
+	.form {
+		margin: 0;
+		padding: 0;
+
 		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		overflow-y: scroll;
-		width: 40%;
-		max-width: 400px;
-		height: 100%;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px 20px;
+	}
+	.range,
+	.check-group {
+		grid-column: span 2;
 	}
 
 	.stage {
-		flex: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		overflow: hidden;
-		height: 100%;
-		padding: 60px;
+		display: grid;
+		place-items: center;
+	}
+
+	@media (min-width: 768px) {
+		.main {
+			--padding: 40px;
+		}
+
+		.container {
+			grid-template-columns: 2fr 3fr;
+		}
+
+		.form {
+			grid-template-columns: 1fr;
+		}
+
+		.stage {
+			padding: var(--padding);
+		}
+
+		.range,
+		.check-group {
+			grid-column: span 1;
+		}
 	}
 
 	input[type='range'],

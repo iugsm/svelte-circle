@@ -8,7 +8,7 @@
 	<nav class="nav">
 		<a href="/" class={pathname === '/' ? 'active' : ''}>Example</a>
 		<a href="/doc" class={pathname === '/doc' ? 'active' : ''}>Docs</a>
-		<a class="github" href="https://github.com/9t5c/svelte-circle" target="_blank">
+		<a class="github" href="https://github.com/9t5c/svelte-circle" target="_blank" rel="noreferrer">
 			<img class="icon icon-normal" src="/github.svg" alt="GitHub" />
 			<img class="icon icon-original" src="/github-original.svg" alt="GitHub" />
 		</a>
@@ -18,11 +18,8 @@
 <style>
 	.header {
 		width: 100%;
-		height: 80px;
+		height: 64px;
 		display: flex;
-		position: fixed;
-		top: 0;
-		left: 0;
 	}
 
 	.border-b {
