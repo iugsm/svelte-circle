@@ -12,3 +12,5 @@ declare namespace App {
 
 	// interface PublicEnv {}
 }
+
+declare module '*.md';

@@ -5,9 +5,10 @@
 	export let color = 'hsla(8, 59%, 65%, 1)';
 	export let textColor = 'hsla(0, 0%, 20%, 1)';
 	export let responsive = false;
-	export let percent = 10;
+	export let percent = 0;
 	export let rounded = false;
 	export let animation = true;
+	export let textStyle = 'font: bold 5rem Helvetica, Arial, sans-serif;';
 
 	let svgWidth: number | string = '';
 
@@ -40,14 +41,7 @@
 		fill="none"
 		style="transition: {animation ? 'stroke-dashoffset 0.5s ease-out' : 'none'}"
 	/>
-	<text
-		style="font: bold 5rem Helvetica, Arial, sans-serif;"
-		fill={textColor}
-		x="50%"
-		y="50%"
-		dx="-25"
-		text-anchor="middle"
-	>
+	<text style={textStyle} fill={textColor} x="50%" y="50%" dx="-25" text-anchor="middle">
 		{percent}
 		<tspan dx="10">%</tspan>
 	</text>

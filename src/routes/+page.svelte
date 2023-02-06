@@ -82,8 +82,10 @@
 		--color-container-bg: hsla(17, 78%, 98%, 1);
 		--padding: 20px;
 
+		width: min(90vw, 80ch);
 		min-height: calc(100vh - 64px);
-		padding: var(--padding);
+		padding-block: var(--padding);
+		margin-inline: auto;
 		accent-color: var(--color-accent);
 
 		display: grid;
