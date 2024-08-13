@@ -1,3 +1,5 @@
+![screenshot](https://raw.githubusercontent.com/iugsm/svelte-circle/main/assets/screenshot.webp)
+
 [![NPM Version](https://img.shields.io/npm/v/svelte-circle.svg)](https://www.npmjs.com/package/svelte-circle)
 [![NPM Downloads](https://img.shields.io/npm/dt/svelte-circle.svg)](https://www.npmjs.com/package/svelte-circle)
 
