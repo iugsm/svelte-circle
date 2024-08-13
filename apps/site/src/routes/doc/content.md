@@ -7,9 +7,6 @@ npm install svelte-circle -D
 # via pnpm
 pnpm add svelte-circle -D
 
-# via yarn
-yarn add svelte-circle -D
-```
 
 ### Useage
 
@@ -24,14 +21,14 @@ yarn add svelte-circle -D
 ### Props
 
 ```typescript
-percent: number;
-width: number;
-lineWidth: number;
-bgColor: string;
-color: string;
-textColor: string;
-responsive: boolean;
-rounded: boolean;
-animation: boolean;
-textStyle: string;
+size?: number; // default: 200
+percent?: number; // default: 0
+lineWidth?: number; // default: 30
+bgColor?: string; // default: 'hsla(13, 58%, 91%, 1)'
+color?: string; // default: 'hsla(8, 59%, 65%, 1)'
+textColor?: string; // default: 'hsla(0, 0%, 20%, 1)'
+responsive?: boolean; // default: false
+rounded?: boolean; // default: false
+animation?: boolean; // default: true
+textStyle?: string; // default: "font: bold 5rem Helvetica, Arial, sans-serif;"
 ```

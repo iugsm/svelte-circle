@@ -2,6 +2,10 @@
 
 A circle progress component for Svelte
 
+## Breaking change
+
+Starting from version 1.0, it requires Svelte 5.
+
 ## Docs & Demo
 
 https://svelte-circle.vercel.app
