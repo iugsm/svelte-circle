@@ -1,65 +1,21 @@
 <script lang="ts">
+	import { siGithub } from 'simple-icons';
 	import { page } from '$app/stores';
 
-	$: pathname = $page.url.pathname;
+	const pathname = $derived($page.url.pathname);
 </script>
 
-<header class="header {pathname !== '/' ? 'border-b' : ''}">
-	<nav class="nav">
-		<a href="/" class={pathname === '/' ? 'active' : ''}>Example</a>
-		<a href="/doc" class={pathname === '/doc' ? 'active' : ''}>Docs</a>
-		<a class="github" href="https://github.com/9t5c/svelte-circle" target="_blank" rel="noreferrer">
-			<img class="icon icon-normal" src="/github.svg" alt="GitHub" />
-			<img class="icon icon-original" src="/github-original.svg" alt="GitHub" />
+<header class="h-12 flex items-center justify-center">
+	<nav class="flex items-center gap-4">
+		<a href="/" class={pathname === '/' ? 'underline' : ''}>Example</a>
+		<a href="/doc" class={pathname === '/doc' ? 'underline' : ''}>Docs</a>
+		<a
+			class="w-4 h-4"
+			href="https://github.com/9t5c/svelte-circle"
+			target="_blank"
+			rel="noreferrer"
+		>
+			{@html siGithub.svg}
 		</a>
 	</nav>
 </header>
-
-<style>
-	.header {
-		width: 100%;
-		height: 64px;
-		display: flex;
-	}
-
-	.border-b {
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		background: #fff;
-	}
-
-	.nav {
-		margin: 0 auto;
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
-
-	.nav a {
-		margin: 0 12px;
-		color: black;
-		font-size: 16px;
-		font-weight: 500;
-	}
-
-	.active {
-		text-decoration: underline;
-	}
-
-	.github .icon-original {
-		display: none;
-	}
-	.github:hover .icon-original {
-		display: inline-block;
-	}
-
-	.github .icon-normal {
-		display: inline-block;
-	}
-	.github:hover .icon-normal {
-		display: none;
-	}
-
-	.icon {
-		width: 24px;
-	}
-</style>

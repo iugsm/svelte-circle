@@ -1,27 +1,20 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import type { Snippet } from 'svelte';
 
-	import Header from './Header.svelte';
 	import '../app.css';
 
-	$: pathname = $page.url.pathname;
+	import Header from './Header.svelte';
+
+	const { children }: { children: Snippet } = $props();
 </script>
 
 <svelte:head>
 	<title>svelte-circle</title>
 </svelte:head>
 
-<main class="main" class:bg={pathname === '/'}>
+<div class="min-h-dvh bg-gradient-to-r from-amber-400 to-orange-400">
 	<Header />
-	<slot />
-</main>
-
-<style>
-	.main {
-		--color-bg: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-	}
-
-	.bg {
-		background-image: var(--color-bg);
-	}
-</style>
+	<main class="p-4 lg:p-6">
+		{@render children()}
+	</main>
+</div>

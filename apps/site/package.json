@@ -1,6 +1,6 @@
 {
 	"name": "site",
-	"version": "0.0.1",
+	"version": "1.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -15,13 +15,18 @@
 		"@sveltejs/adapter-auto": "^3.2.4",
 		"@sveltejs/kit": "^2.5.22",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
-		"highlight.js": "^11.10.0",
+		"@tailwindcss/typography": "^0.5.14",
+		"autoprefixer": "^10.4.20",
+		"daisyui": "^4.12.10",
 		"mdsvex": "^0.11.2",
+		"postcss": "^8.4.41",
 		"prettier": "^3.3.3",
 		"prettier-plugin-svelte": "^3.2.6",
+		"simple-icons": "^13.5.0",
 		"svelte": "5.0.0-next.219",
 		"svelte-check": "^3.8.5",
 		"svelte-circle": "workspace:*",
+		"tailwindcss": "^3.4.9",
 		"tslib": "^2.6.3",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.0"

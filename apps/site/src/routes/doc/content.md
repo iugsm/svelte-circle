@@ -1,6 +1,6 @@
-### Install
+### Install & Usage
 
-```sh
+````sh
 # via npm
 npm install svelte-circle -D
 
@@ -8,7 +8,7 @@ npm install svelte-circle -D
 pnpm add svelte-circle -D
 
 
-### Useage
+### Usage
 
 ```svelte
 <script>
@@ -16,7 +16,7 @@ pnpm add svelte-circle -D
 </script>
 
 <Circle percent={10} />
-```
+````
 
 ### Props With Svelte 5
 

@@ -3,15 +3,6 @@
 	import './prism-theme.css';
 </script>
 
-<section class="container">
+<div class="prose prose-sm mx-auto">
 	<Content />
-</section>
-
-<style>
-	.container {
-		width: min(90vw, 65ch);
-		margin-inline: auto;
-		padding-block: 1rem;
-		font-size: 14px;
-	}
-</style>
+</div>
