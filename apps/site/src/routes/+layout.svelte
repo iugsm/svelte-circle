@@ -3,7 +3,7 @@
 
 	import '../app.css';
 
-	import Header from './Header.svelte';
+	import Header from './header.svelte';
 
 	const { children }: { children: Snippet } = $props();
 </script>

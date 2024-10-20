@@ -1,6 +1,6 @@
 {
   "name": "svelte-circle",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "homepage": "https://svelte-circle.vercel.app",
   "author": {
     "name": "Abiee"
@@ -21,32 +21,35 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     }
   },
-  "files": [
-    "dist",
-    "!dist/**/*.test.*",
-    "!dist/**/*.spec.*"
-  ],
   "peerDependencies": {
-    "svelte": "^5.0.0-next.1"
+    "svelte": "^5.0.0"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^3.2.4",
-    "@sveltejs/kit": "^2.5.22",
-    "@sveltejs/package": "^2.3.4",
-    "@sveltejs/vite-plugin-svelte": "^3.1.1",
-    "publint": "^0.1.16",
-    "svelte": "5.0.0-next.219",
-    "svelte-check": "^3.8.5",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.0"
-  },
-  "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "type": "module"
+    "@sveltejs/adapter-auto": "^3.2.5",
+    "@sveltejs/kit": "^2.7.2",
+    "@sveltejs/package": "^2.3.5",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "publint": "^0.2.11",
+    "svelte": "^5.0.2",
+    "svelte-check": "^3.8.6",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
+  }
 }

@@ -32,6 +32,7 @@
 				class="input input-sm input-bordered w-full max-w-xs"
 				type="number"
 				bind:value={size}
+				spellcheck="false"
 			/>
 		</fieldset>
 
@@ -52,6 +53,7 @@
 				class="input input-sm input-bordered w-full max-w-xs"
 				type="text"
 				bind:value={color}
+				spellcheck="false"
 			/>
 		</fieldset>
 
@@ -62,6 +64,7 @@
 				class="input input-sm input-bordered w-full max-w-xs"
 				type="text"
 				bind:value={bgColor}
+				spellcheck="false"
 			/>
 		</fieldset>
 
@@ -72,6 +75,7 @@
 				class="input input-sm input-bordered w-full max-w-xs"
 				type="text"
 				bind:value={textColor}
+				spellcheck="false"
 			/>
 		</fieldset>
 
